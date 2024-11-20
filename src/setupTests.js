@@ -3,3 +3,13 @@
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
+// import {TextEncoder, TextDecoder} from 'util';
+
+
+// global.TextDecoder = TextDecoder;
+// global.TextEncoder = TextEncoder;
+// import {server} from './mocks/server.js'
+
+// beforeAll(()=>server.listen())
+// afterEach(()=>server.resetHandlers())
+// afterAll(()=>server.close())

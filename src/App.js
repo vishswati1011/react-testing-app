@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { useState } from "react";
+import FeedbackForm from "./components/FeedbackForm";
+import FeedbackOverview from "./components/FeedbackOverview";
 function App() {
+
+  const [feedbacks,setFeedbacks]= useState([]);
+  // const feedbackList = [
+  //   {id:111,feedbackText:'Food was too spicy'},
+  //   {id:222,feedbackText:'Staff should be more polite'},
+  //   {id:333,feedbackText:'Price was high'}
+  // ]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" data-testid="parent-div">
+       <FeedbackForm setFeedbacks={setFeedbacks}/>
+       <FeedbackOverview feedbackList={feedbacks}/>
     </div>
   );
 }
